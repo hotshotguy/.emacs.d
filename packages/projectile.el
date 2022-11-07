@@ -1,0 +1,2 @@
+(leaf projectile
+  :ensure t)

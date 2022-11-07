@@ -1,0 +1,2 @@
+(leaf magit
+  :ensure t)
