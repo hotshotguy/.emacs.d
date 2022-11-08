@@ -43,5 +43,8 @@
 (ivansh-load-directory-files ivansh-packages-dir)
 (ivansh-load-directory-files ivansh-hydras-dir)
 
+(when ivansh-theme
+  (load-theme ivansh-theme t))
+
 (provide 'core)
 ;;; core.el ends here

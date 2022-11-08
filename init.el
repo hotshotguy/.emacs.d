@@ -4,4 +4,5 @@
 
 (add-to-list 'load-path (expand-file-name "core" ivansh-config-dir))
 
+(require 'ivansh-custom)
 (require 'core)
