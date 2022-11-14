@@ -31,6 +31,8 @@
 (menu-bar-mode 0)
 (tool-bar-mode 0)
 (setq make-backup-files nil)
+;; Disables beep system sound
+(setq visible-bell t)
 
 ;; config changes made through the customize UI will be stored here
 (setq custom-file (expand-file-name "custom.el" ivansh-packages-dir))
