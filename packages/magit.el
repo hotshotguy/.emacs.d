@@ -1,2 +1,5 @@
 (leaf magit
-  :ensure t)
+  :ensure t
+  :init
+  (require 'magit-process))
+
