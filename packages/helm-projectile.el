@@ -1,2 +1,2 @@
 (leaf helm-projectile
-  :ensure t (helm projectile))
+  :ensure (helm projectile))
