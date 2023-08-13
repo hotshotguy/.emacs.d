@@ -1,0 +1,2 @@
+(leaf company
+  :ensure t)
