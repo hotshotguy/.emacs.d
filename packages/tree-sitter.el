@@ -44,11 +44,11 @@
              (json-mode . json-ts-mode)
              (js-json-mode . json-ts-mode)))
     (add-to-list 'major-mode-remap-alist mapping))
+  :hook ((tree-sitter-after-on . tree-sitter-hl-mode))
   :config
-
   (global-tree-sitter-mode)
-  (add-hook 'tree-sitter-after-on-hook #'tree-sitter-hl-mode)
   (mp-setup-install-grammars)
+
   ;; Do not forget to customize Combobulate to your liking:
   ;;
   ;;  M-x customize-group RET combobulate RET
@@ -58,7 +58,7 @@
     ;; You can customize Combobulate's key prefix here.
     ;; Note that you may have to restart Emacs for this to take effect!
     (setq combobulate-key-prefix "C-c o")
-
+    :commands (tide)
     ;; Optional, but recommended.
     ;;
     ;; You can manually enable Combobulate with `M-x
@@ -71,7 +71,8 @@
      (yaml-ts-mode . combobulate-mode)
      (typescript-ts-mode . combobulate-mode)
      (json-ts-mode . combobulate-mode)
-     (tsx-ts-mode . combobulate-mode))
+     (tsx-ts-mode . combobulate-mode)
+     ((typescript-ts-mode tsx-ts-mode) . tide-setup))
     ;; Amend this to the directory where you keep Combobulate's source
     ;; code.
     :load-path ("github/combobulate")))
