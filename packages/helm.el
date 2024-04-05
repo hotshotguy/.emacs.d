@@ -1,13 +1,17 @@
 ;;; package --- Summary
 ;;; Commentary:
 ;;; Code:
-(leaf helm
+(use-package helm
   :ensure t
   :init
   (helm-mode 1)
   :bind
-  (:global-map ("M-x" . helm-M-x)
-	       ("C-x C-f" . helm-find-files)))
+  (("M-x" . helm-M-x)
+	 ("C-x C-f" . helm-find-files)))
+
+(use-package helm-rg
+	:after (helm)
+	:bind (("C-S-f" . helm-rg)))
 
 (provide 'ivansh-helm)
 ;;; ivansh-helm.el ends here

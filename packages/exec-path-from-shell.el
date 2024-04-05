@@ -1,4 +1,5 @@
-(leaf exec-path-from-shell
+(use-package exec-path-from-shell
   :ensure t
-  :init
-  (exec-path-from-shell-initialize))
+  :config
+  (exec-path-from-shell-copy-env "SSH_AGENT_PID")
+  (exec-path-from-shell-copy-env "SSH_AUTH_SOCK"))
